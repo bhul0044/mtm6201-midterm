@@ -26,7 +26,6 @@
 }
 
 body {
-    /* width: 75vmax; */
     margin: 0;
     font-family: 'Lato', sans-serif;
     background-color: #000;
@@ -43,20 +42,17 @@ header {
     background-color: #000;
 }
 
-/* .logo {
-    position: relative;
-} */
 
-.logo {
-    top: 20px; /* Adjust the top position as needed */
-    right: 50px; /* Increase this value to move the logo more to the left */
+.logo-banner {
+    top: 20px; 
+    right: 50px; 
     text-align: left;
     color: var(--main-font);
     position: relative;
     z-index: 0;
 }
 
-.logo h1 {
+.logo-banner h1 {
     display: inline;
     font-family: 'Playfair Display', serif;
     font-size: 24px;
@@ -64,21 +60,11 @@ header {
     position: relative;
 }
 
-.logo .system-text {
+.logo-banner .system-text {
     color: var(--main-font);
     position: relative;
 }
 
-/* .logo h1::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-2);
-    z-index: -1;
-} */
 
 nav {
     margin-left: auto;
@@ -88,7 +74,7 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin: 0; /* Remove default margin */
+    margin: 0; 
     padding: 0;
 }
 
@@ -110,30 +96,18 @@ nav .contact {
     border-radius: 20px;
 }
 
-.image-container {
+.image-containers {
     position: relative;
     overflow: hidden;
-    /* display: inline-block; */
-    /* width: 75vmax; */
+  
 }
 
-.image-container img {
+.image-containers img {
     width: 100%;
     height: auto;
     animation: slow-zoom 30s infinite linear;
-    /* display: block; */
     box-shadow: 0 0 20px 30px rgba(255, 255, 255, 0.9);
 }
-
-/* .hero {
-    position: relative;
-    height: 500px;
-    text-align: left;
-    color: var(--main-font);
-    overflow: hidden;
-    display: flex;
-    animation: zoom-in-out 30s infinite alternate;
-} */
 
 .robin {
     width: 88px;
@@ -145,48 +119,48 @@ nav .contact {
     background-color: var(--accent-3);
 }
 
-.hero {
-    border: 2px solid transparent; /* Set initial border */
+.attention {
+    border: 2px solid transparent; 
     box-shadow: 0 0 12px rgba(255, 255, 255, 0.463);
     width: 100%;
     height: auto;
     border-radius: 15px;
 }
 
-.hero-text {
+.attention-text {
     text-align: left;
     position: absolute;
     bottom: 20px;
     left: 20px;
 }
 
-.hero-text h2:first-of-type {
+.attention-text h2:first-of-type {
     font-size: 12px;
     margin-bottom: 10px;
 }
 
-.hero-text h2:nth-of-type(2) {
+.attention-text h2:nth-of-type(2) {
     margin-top: 0;
 }
 
-.hero-text span {
+.attention-text span {
     color: #00aced;
 }
 
-.hero-text p {
+.attention-text p {
     font-size: 18px;
     margin: 10px 0 0;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.locals {
+.locals-circles {
     text-align: center;
     padding: 50px 0;
 }
 
-.locals h2 {
-    font-family: 'Playfair Display', serif;
+.locals-circles h2 {
+    font-family: 'Lato', sans-serif;
     font-size: 36px;
     margin-bottom: 30px;
 }
@@ -198,13 +172,13 @@ nav .contact {
     justify-content: center;
 }
 
-.planet {
+.planet-galaxy {
     text-align: center;
     box-sizing: border-box;
     padding: 10px;
 }
 
-.planet img {
+.planet-galaxy img {
     width: 100%;
     height: auto;
     max-width: 200px;
@@ -212,7 +186,7 @@ nav .contact {
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.planet a {
+.planet-galaxy a {
     display: block;
     text-decoration: none;
     color: var(--main-font);
@@ -220,17 +194,18 @@ nav .contact {
     transition: color 0.3s ease;
 }
 
-.planet a:hover {
+.planet-galaxy a:hover {
     color: var(--accent-1);
 }
 
-.planet h3 {
+.planet-galaxy h3 {
     font-size: 18px;
     margin: 10px 0;
 }
 
-.planet button {
-    background-color: #5cb5d8;
+.planet-galaxy button {
+    background-color: var(--accent-1)
+    ;
     color: var(--main-font);
     border: none;
     border-radius: 20px;
@@ -240,9 +215,13 @@ nav .contact {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.planet button:hover {
-    background-color: #800080;
+.planet-galaxy button:hover {
+    background-color: 
+    #5cb5d8 ;
     transform: scale(1.1);
+}
+.planet-galaxy button:visited {
+    background-color: #800080; 
 }
 
 footer {
@@ -253,7 +232,7 @@ footer {
     font-weight: bolder;
 }
 
-.hero {
+.attention {
     position: relative;
     height: 500px;
     overflow: hidden;
@@ -288,75 +267,68 @@ footer {
     }
 }
 
-.hero h2 {
+.attention h2 {
     font-size: 2rem;
     margin-bottom: 10px;
 }
 
-.hero h1 {
+.attention h1 {
     font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.hero p {
+.attention p {
     font-size: 1.2rem;
     max-width: 600px;
     margin: 0 auto;
 }
 
 @media (max-width: 900px) {
-    header {
+header {
         flex-direction: column;
         align-items: center;
-        /* padding: 100px; */
+        padding: 20px 20px;
     }
-    .locals {
+    .locals-circles {
         text-align: center;
-        padding: 50px 0; /* Padding adjustment for "contact" section */
-    }
-    
-
-    .hero {
-        animation: none;
+        padding: 50px 0; 
     }
 
-    .logo h1 {
-        text-align: center;
+    .attention-text{
+        bottom: 10px;
+        left: 10px;
     }
-    .hero-text {
-        text-align: left;
+.attention-text p{
+    font-size: 16px;
+}
+    .attention {
+        
+        margin: 20px;
     }
-    /* nav {
-        flex-direction: column;
-        align-items: center;
-    } */
+    .attention-text h2{
+        font-size: 24px;
+    }
+    .locals-circles h2{
+        font-size: 30px;
+    }
 
+  
     .planettts {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns for 900px screens */
+        grid-template-columns: repeat(3, 1fr); 
         gap: 20px;
         margin-top: 20px;
     }
 
- 
-    .hero-text {
-        /* padding-left: 40px; */
-        bottom: 40px;
-        text-align: center; /* Centering the text */
-        left: auto; /* Resetting left positioning */
-
-    }
 }
 
 @media (max-width: 400px) {
-    .hero {
-        animation: none;
-    }
+    
 
-    .logo h1 {
+    .logo-banner h1 {
         text-align: center;
     }
 
-    .hero img {
+    .attention img {
         width: 100%;
         height: auto;
         position: relative;
@@ -369,35 +341,42 @@ footer {
     }
 
     .planettts {
-        grid-template-columns: 1fr; /* 1 column for 400px screens */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
 
-    .planet {
+    .planet-galaxy {
         flex: 1 1 100%;
         max-width: 100%;
     }
 
-    .hero-text {
+    .attention-text {
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
     }
+    .logo-banner {
+        text-align: center; 
+    }
 
-    .hero-text h2 {
-        font-size: 14px;
+    .logo-banner h1 {
+        text-align: center; }
+
+    .attention-text h2 {
+        font-size: 28px;
         margin: 0;
     }
 
-    .hero-text h1 {
+    .attention-text h1 {
         font-size: 18px;
     }
 
-    .hero-text p {
+    .attention-text p {
         font-size: 14px;
     }
 
-    .hero-text h1 br {
+    .attention-text h1 br {
         display: block;
     }
+
 }
